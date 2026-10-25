@@ -1,34 +1,23 @@
+
 import React from "react";
 import useToggle from "./useToggle";
-
+import "./index.css";
 function App() {
-
-  // TODO:
-  // Use the custom useToggle Hook here
-  // Example:
-  // const [isOn, toggle] = useToggle(false);
-
+  const [isOn, toggle] = useToggle(false);
 
   return (
     <div className="container">
-
-      <h1>Custom Toggle Hook</h1>
-
       <div className="card">
+        <h1>Custom Toggle Hook</h1>
 
         <h2>
-          Status:
-          {/* TODO: Display ON when value is true
-              and OFF when value is false */}
+          Status: {isOn ? "ON" : "OFF"}
         </h2>
 
-        <button>
-          {/* TODO: Call the toggle function when clicked */}
+        <button onClick={toggle}>
           Toggle
         </button>
-
       </div>
-
     </div>
   );
 }
